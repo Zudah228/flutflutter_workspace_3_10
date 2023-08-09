@@ -1,0 +1,12 @@
+{
+  "Snippet: arb localization": {
+    "prefix": ["arb"],
+    "scope": "ruby",
+    "body": [
+      "\"$1\": \"$2\",",
+      "\"@$1\": {",
+      "  \"description\": \"$2\"",
+      "}",
+    ]
+  }
+}

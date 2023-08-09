@@ -1,0 +1,53 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug mock",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/__mock__/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/dev.json"]
+    },
+    {
+      "name": "Debug dev",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/dev.json"]
+    },
+    {
+      "name": "Debug dev: firebase analytics enable",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/dev_firebase_analytics.json"]
+    },
+    {
+      "name": "Profile dev",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "profile",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/dev.json"]
+    },
+    {
+      "name": "Debug stg",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/stg.json"]
+    },
+    {
+      "name": "Debug prod",
+      "request": "launch",
+      "type": "dart",
+      "flutterMode": "debug",
+      "program": "lib/main.dart",
+      "args": ["--dart-define-from-file=dart_defines/prod.json"]
+    },
+  ]
+}
