@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_workspace_3_10/pages/todo_details_page.dart';
 import 'package:uuid/uuid.dart';
 
-import '../entities/todo.dart';
-import '../utils/image_url.dart';
+import '../../entities/todo.dart';
+import '../../utils/image_url.dart';
+import 'todo_details_page.dart';
 
 class TodoListPage extends StatefulWidget {
   const TodoListPage({super.key});
@@ -50,6 +50,7 @@ class _TodoListPageState extends State<TodoListPage> {
           slivers: [
             SliverAppBar(
               backgroundColor: Colors.transparent,
+              automaticallyImplyLeading: false,
               toolbarHeight: 64,
               title: Row(
                 children: [

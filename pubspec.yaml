@@ -12,8 +12,11 @@ dependencies:
   flutter:
     sdk: flutter
 
-
+  # UI
   cupertino_icons: ^1.0.2
+  carousel_slider: ^4.2.1
+
+  # Extend Dart
   freezed_annotation: ^2.2.0
   equatable: ^2.0.5
   uuid: ^3.0.7
