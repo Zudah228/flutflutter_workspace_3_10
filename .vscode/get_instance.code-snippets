@@ -5,9 +5,9 @@
     "body": "final theme = Theme.of(context);"
   },
   "Snippets: get ColorSchemeCustomized instance": {
-    "prefix": ["customcolors","colorScheme", "appcolorscheme", "final customColors"],
+    "prefix": ["colorScheme", "customcolors","colorScheme", "appcolorscheme", "final customColors"],
     "scope": "dart",
-    "body": "final customColors = Theme.of(context).extension<CustomColors$0>()!;"
+    "body": "final colorScheme = Theme.of(context).colorScheme;"
   },
   "Snippets: get MediaQuery instance": {
     "prefix": ["mediaQuery", "final mediaQuery"],

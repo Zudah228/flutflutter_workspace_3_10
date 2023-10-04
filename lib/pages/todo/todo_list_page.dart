@@ -80,10 +80,12 @@ class _TodoListPageState extends State<TodoListPage> {
 
                   return ListTile(
                     title: Text(todo.title),
-                    leading: Hero(
+                    leading:todo.imageUrl != null
+                    ? Hero(
                       tag: todo.id,
-                      child: Image.network(todo.imageUrl),
-                    ),
+                      child: Image.network(todo.imageUrl!),
+                    )
+                    : null,
                     onTap: () {
                       Navigator.of(context).push(
                         TodoDetailsPage.route(

@@ -44,10 +44,11 @@ class _TodoDetailsPageState extends State<TodoDetailsPage> {
           child: Column(
         children: [
           const SizedBox(height: 24),
+          if (widget.args.todo.imageUrl case final imageUrl?)
           Hero(
             tag: widget.args.todo.id,
             child: Image.network(
-              widget.args.todo.imageUrl,
+              imageUrl,
               height: 240,
             ),
           )

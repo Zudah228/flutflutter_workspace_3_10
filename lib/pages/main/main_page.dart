@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_workspace_3_10/pages/animated_list/animated_list_page.dart';
 import 'package:flutter_workspace_3_10/pages/page_view/page_view_page.dart';
 import 'package:flutter_workspace_3_10/pages/todo/todo_list_page.dart';
 
@@ -14,8 +15,8 @@ class MainPage extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar.large(
-            title: const Text('Flutter playground'),
+          const SliverAppBar.large(
+            title: Text('Flutter playground'),
           ),
           SliverPadding(
             padding: const EdgeInsets.symmetric(
@@ -28,6 +29,7 @@ class MainPage extends StatelessWidget {
                 _Page(name: 'Todo', route: TodoListPage.route),
                 _Page(name: 'PageView', route: PageViewPage.route),
                 _Page(name: 'ExpansionTile', route: ExpansionTilePage.route),
+                _Page(name: 'AnimatedList', route: AnimatedListPage.route),
               ]
                   .map(
                     (page) => InkWell(

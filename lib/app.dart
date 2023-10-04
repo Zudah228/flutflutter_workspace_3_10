@@ -8,18 +8,11 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     const primary = Color(0xFF435BF5);
-    const colorScheme = ColorScheme(
+    final colorScheme = ColorScheme.fromSeed(
+      seedColor: primary,
       brightness: Brightness.light,
       primary: primary,
       onPrimary: Colors.white,
-      secondary: Color(0xFF36F5DC),
-      onSecondary: Colors.white,
-      error: Color(0xFFEB718A),
-      onError: Colors.white,
-      background: Colors.white,
-      onBackground: Colors.black,
-      surface: Color(0xFFDDE3F9),
-      onSurface: Colors.white,
     );
 
     return MaterialApp(
@@ -28,7 +21,8 @@ class App extends StatelessWidget {
         colorScheme: colorScheme,
         useMaterial3: true,
         appBarTheme: AppBarTheme(
-          backgroundColor: colorScheme.primaryContainer,
+          backgroundColor: colorScheme.primary,
+          foregroundColor: colorScheme.onPrimary,
         ),
         inputDecorationTheme: const InputDecorationTheme(
           filled: true,

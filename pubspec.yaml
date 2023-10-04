@@ -11,6 +11,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  # Architecture
+  flutter_riverpod: 
 
   # UI
   cupertino_icons: ^1.0.2
