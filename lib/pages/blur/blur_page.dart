@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_workspace_3_10/utils/image_url.dart';
 
 class BlurPage extends StatelessWidget {
   const BlurPage._();
@@ -27,10 +26,10 @@ class BlurPage extends StatelessWidget {
         children: [
           ImageFiltered(
             imageFilter: ImageFilter.blur(
-              sigmaX: 50,
-              sigmaY: 50,
+              sigmaX: 10,
+              sigmaY: 10,
             ),
-            child: Image.network(ImageUrl.blueGiant),
+            child: Image.network('https://picsum.photos/250?image=9'),
           ),
           Column(
             children: [
@@ -44,7 +43,7 @@ class BlurPage extends StatelessWidget {
                     child: ColoredBox(color: colorScheme.primary),
                   ),
                   separatorBuilder: (_, __) => const SizedBox(width: 24),
-                  itemCount: 20,
+                  itemCount: 10,
                 ),
               ),
             ],

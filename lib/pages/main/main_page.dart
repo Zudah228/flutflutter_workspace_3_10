@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_workspace_3_10/pages/animated_list/animated_list_page.dart';
 import 'package:flutter_workspace_3_10/pages/blur/blur_page.dart';
+import 'package:flutter_workspace_3_10/pages/overlay/overlay_page.dart';
 import 'package:flutter_workspace_3_10/pages/page_view/page_view_page.dart';
 import 'package:flutter_workspace_3_10/pages/todo/todo_list_page.dart';
 
@@ -32,6 +33,7 @@ class MainPage extends StatelessWidget {
                 _Page(name: 'ExpansionTile', route: ExpansionTilePage.route),
                 _Page(name: 'AnimatedList', route: AnimatedListPage.route),
                 _Page(name: 'Blur', route: BlurPage.route),
+                _Page(name: 'Overlay', route: OverlayPage.route),
               ]
                   .map(
                     (page) => InkWell(
