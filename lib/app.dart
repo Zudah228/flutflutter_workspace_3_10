@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_workspace_3_10/pages/decoration_image_scaling/decoration_image_scaling_page.dart';
 
 import 'pages/animated_list/animated_list_page.dart';
 import 'pages/blur/blur_page.dart';
@@ -15,6 +16,8 @@ class App extends StatelessWidget {
     const primary = Color(0xFF435BF5);
     final colorScheme = ColorScheme.fromSeed(
       seedColor: primary,
+      tertiary: Colors.amber[400],
+      tertiaryContainer: Colors.amber[100],
       brightness: Brightness.light,
       primary: primary,
       onPrimary: Colors.white,
@@ -79,19 +82,26 @@ class MainPage extends StatelessWidget {
                 _Page(name: 'AnimatedList', route: AnimatedListPage.route),
                 _Page(name: 'Blur', route: BlurPage.route),
                 _Page(name: 'Overlay', route: OverlayPage.route),
+                _Page(
+                    name: 'DecorationImageScaling',
+                    route: DecorationImageScalingPage.route),
               ]
+                  .reversed
                   .map(
                     (page) => InkWell(
                       onTap: () {
                         Navigator.of(context).push(page.route());
                       },
                       child: Card(
-                        child: Center(
-                          child: Text(
-                            page.name,
-                            style: const TextStyle(
-                              fontSize: 24,
-                              fontWeight: FontWeight.w400,
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Center(
+                            child: Text(
+                              page.name,
+                              style: const TextStyle(
+                                fontSize: 24,
+                                fontWeight: FontWeight.w400,
+                              ),
                             ),
                           ),
                         ),
