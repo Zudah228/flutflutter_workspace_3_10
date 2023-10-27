@@ -37,7 +37,7 @@ class ExpansionTilePage extends StatelessWidget {
                     ),
                   )
                   .toList(),
-            )
+            ),
           ],
         ),
       ),

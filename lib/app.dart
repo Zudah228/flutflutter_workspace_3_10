@@ -83,8 +83,9 @@ class MainPage extends StatelessWidget {
                 _Page(name: 'Blur', route: BlurPage.route),
                 _Page(name: 'Overlay', route: OverlayPage.route),
                 _Page(
-                    name: 'DecorationImageScaling',
-                    route: DecorationImageScalingPage.route),
+                  name: 'DecorationImageScaling',
+                  route: DecorationImageScalingPage.route,
+                ),
               ]
                   .reversed
                   .map(
@@ -110,7 +111,7 @@ class MainPage extends StatelessWidget {
                   )
                   .toList(),
             ),
-          )
+          ),
         ],
       ),
     );

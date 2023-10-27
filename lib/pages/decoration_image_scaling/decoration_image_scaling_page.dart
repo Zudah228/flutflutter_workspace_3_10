@@ -78,7 +78,7 @@ class DecorationImageScalingPage extends StatelessWidget {
                                 image: _image,
                                 fit: BoxFit.cover,
                               ),
-                              Center(child: _InnerContents())
+                              Center(child: _InnerContents()),
                             ],
                           ),
                         ),

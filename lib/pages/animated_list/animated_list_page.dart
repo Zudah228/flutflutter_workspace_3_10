@@ -65,33 +65,34 @@ class _AnimatedListPageState extends State<AnimatedListPage> {
       child: Scaffold(
         appBar: AppBar(
           title: PopupMenuButton(
-              position: PopupMenuPosition.under,
-              itemBuilder: (context) {
-                return [
-                  PopupMenuItem(
-                    child: const Text('Flutter サンプル'),
-                    onTap: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const AnimatedListSample(),
-                        ),
-                      );
-                    },
-                  ),
-                ];
-              },
-              child: const Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  SizedBox(width: 4),
-                  Text('AnimatedListPage'),
-                  SizedBox(width: 8),
-                  Icon(
-                    Icons.keyboard_arrow_down,
-                    size: 32,
-                  )
-                ],
-              )),
+            position: PopupMenuPosition.under,
+            itemBuilder: (context) {
+              return [
+                PopupMenuItem(
+                  child: const Text('Flutter サンプル'),
+                  onTap: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const AnimatedListSample(),
+                      ),
+                    );
+                  },
+                ),
+              ];
+            },
+            child: const Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                SizedBox(width: 4),
+                Text('AnimatedListPage'),
+                SizedBox(width: 8),
+                Icon(
+                  Icons.keyboard_arrow_down,
+                  size: 32,
+                ),
+              ],
+            ),
+          ),
           actions: [
             IconButton(
               onPressed: _removeAll,

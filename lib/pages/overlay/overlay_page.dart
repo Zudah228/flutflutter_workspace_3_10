@@ -77,7 +77,7 @@ class _OverlayPageState extends State<OverlayPage> {
                   clipBehavior: Clip.antiAliasWithSaveLayer,
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),

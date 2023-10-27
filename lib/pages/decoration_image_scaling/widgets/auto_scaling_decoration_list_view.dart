@@ -25,7 +25,7 @@ class AutoScalingDecorationListView extends StatelessWidget {
                 label: const Text('戻る'),
               ),
             ),
-          )
+          ),
         ],
       ),
     );

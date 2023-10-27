@@ -43,64 +43,65 @@ class _TodoListPageState extends State<TodoListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: const Text('Todo'),
-        ),
-        body: CustomScrollView(
-          slivers: [
-            SliverAppBar(
-              backgroundColor: Colors.transparent,
-              automaticallyImplyLeading: false,
-              toolbarHeight: 64,
-              title: Row(
-                children: [
-                  Expanded(
-                    child: TextField(
-                      controller: _titleController,
-                    ),
+      appBar: AppBar(
+        title: const Text('Todo'),
+      ),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.transparent,
+            automaticallyImplyLeading: false,
+            toolbarHeight: 64,
+            title: Row(
+              children: [
+                Expanded(
+                  child: TextField(
+                    controller: _titleController,
                   ),
-                  const SizedBox(width: 16),
-                  ElevatedButton(
-                    onPressed: () {
-                      _add(title: _titleController.text);
-                    },
-                    child: const Icon(Icons.add),
-                  )
-                ],
-              ),
+                ),
+                const SizedBox(width: 16),
+                ElevatedButton(
+                  onPressed: () {
+                    _add(title: _titleController.text);
+                  },
+                  child: const Icon(Icons.add),
+                ),
+              ],
             ),
-            SliverPadding(
-              padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(
-                top: 24,
-              ),
-              sliver: SliverList.separated(
-                itemCount: _todoList.length,
-                itemBuilder: (context, index) {
-                  final todo = _todoList[index];
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.symmetric(horizontal: 16).copyWith(
+              top: 24,
+            ),
+            sliver: SliverList.separated(
+              itemCount: _todoList.length,
+              itemBuilder: (context, index) {
+                final todo = _todoList[index];
 
-                  return ListTile(
-                    title: Text(todo.title),
-                    leading:todo.imageUrl != null
-                    ? Hero(
-                      tag: todo.id,
-                      child: Image.network(todo.imageUrl!),
-                    )
-                    : null,
-                    onTap: () {
-                      Navigator.of(context).push(
-                        TodoDetailsPage.route(
-                          TodoDetailsPageArgs(todo: todo),
-                        ),
-                      );
-                    },
-                  );
-                },
-                separatorBuilder: (_, __) {
-                  return const SizedBox(height: 16);
-                },
-              ),
-            )
-          ],
-        ));
+                return ListTile(
+                  title: Text(todo.title),
+                  leading: todo.imageUrl != null
+                      ? Hero(
+                          tag: todo.id,
+                          child: Image.network(todo.imageUrl!),
+                        )
+                      : null,
+                  onTap: () {
+                    Navigator.of(context).push(
+                      TodoDetailsPage.route(
+                        TodoDetailsPageArgs(todo: todo),
+                      ),
+                    );
+                  },
+                );
+              },
+              separatorBuilder: (_, __) {
+                return const SizedBox(height: 16);
+              },
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

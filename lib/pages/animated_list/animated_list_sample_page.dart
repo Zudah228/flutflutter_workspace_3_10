@@ -27,7 +27,10 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
 
   // Used to build list items that haven't been removed.
   Widget _buildItem(
-      BuildContext context, int index, Animation<double> animation) {
+    BuildContext context,
+    int index,
+    Animation<double> animation,
+  ) {
     return CardItem(
       animation: animation,
       item: _list[index],
@@ -48,7 +51,10 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
   /// The widget will be used by the [AnimatedListState.removeItem] method's
   /// [AnimatedRemovedItemBuilder] parameter.
   Widget _buildRemovedItem(
-      int item, BuildContext context, Animation<double> animation) {
+    int item,
+    BuildContext context,
+    Animation<double> animation,
+  ) {
     return CardItem(
       animation: animation,
       item: item,
@@ -105,7 +111,10 @@ class _AnimatedListSampleState extends State<AnimatedListSample> {
 }
 
 typedef RemovedItemBuilder<T> = Widget Function(
-    T item, BuildContext context, Animation<double> animation);
+  T item,
+  BuildContext context,
+  Animation<double> animation,
+);
 
 /// Keeps a Dart [List] in sync with an [AnimatedList].
 ///

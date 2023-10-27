@@ -41,19 +41,20 @@ class _TodoDetailsPageState extends State<TodoDetailsPage> {
         title: Text(widget.args.todo.title),
       ),
       body: Center(
-          child: Column(
-        children: [
-          const SizedBox(height: 24),
-          if (widget.args.todo.imageUrl case final imageUrl?)
-          Hero(
-            tag: widget.args.todo.id,
-            child: Image.network(
-              imageUrl,
-              height: 240,
-            ),
-          )
-        ],
-      )),
+        child: Column(
+          children: [
+            const SizedBox(height: 24),
+            if (widget.args.todo.imageUrl case final imageUrl?)
+              Hero(
+                tag: widget.args.todo.id,
+                child: Image.network(
+                  imageUrl,
+                  height: 240,
+                ),
+              ),
+          ],
+        ),
+      ),
     );
   }
 }

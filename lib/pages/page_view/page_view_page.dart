@@ -57,7 +57,7 @@ class _PageViewPageState extends State<PageViewPage> {
                 ),
               ),
             ),
-          )
+          ),
         ],
       ),
     );
@@ -77,20 +77,23 @@ class _PageItem {
 
   static List<_PageItem> get items => <_PageItem>[
         _PageItem(
-            color: Colors.red,
-            title: 'あか',
-            url:
-                'https://www.toho.co.jp/images/7a38a6e5d35c380e4b671912442183daeee5420b0b21f880565fb900a051e932'),
+          color: Colors.red,
+          title: 'あか',
+          url:
+              'https://www.toho.co.jp/images/7a38a6e5d35c380e4b671912442183daeee5420b0b21f880565fb900a051e932',
+        ),
         _PageItem(
-            color: Colors.blue,
-            title: 'あお',
-            url:
-                'https://www.toho.co.jp/images/b513f51ed672b9c74dd743645a90d9e498d43d7c7d08248bad018165bab3da53'),
+          color: Colors.blue,
+          title: 'あお',
+          url:
+              'https://www.toho.co.jp/images/b513f51ed672b9c74dd743645a90d9e498d43d7c7d08248bad018165bab3da53',
+        ),
         _PageItem(
-            color: Colors.yellow,
-            title: 'き',
-            url:
-                'https://www.toho.co.jp/images/f4602ad1a6d3d01086b3920b62e11bf768f11a0cb0794fd3d47cfc7f0a900817'),
+          color: Colors.yellow,
+          title: 'き',
+          url:
+              'https://www.toho.co.jp/images/f4602ad1a6d3d01086b3920b62e11bf768f11a0cb0794fd3d47cfc7f0a900817',
+        ),
       ];
 
   static Widget Function(BuildContext context, int, int) get itemBuilder =>
@@ -104,8 +107,9 @@ class _PageItem {
             mainAxisSize: MainAxisSize.min,
             children: [
               AspectRatio(
-                  aspectRatio: kPosterStandardAspectRatio,
-                  child: Image.network(item.url)),
+                aspectRatio: kPosterStandardAspectRatio,
+                child: Image.network(item.url),
+              ),
               AnimatedSize(
                 duration: const Duration(milliseconds: 300),
                 child: Container(
@@ -114,7 +118,7 @@ class _PageItem {
                   color: Colors.blueGrey,
                   child: Text(item.title),
                 ),
-              )
+              ),
             ],
           ),
         );

@@ -47,7 +47,7 @@ class BlurPage extends StatelessWidget {
                 ),
               ),
             ],
-          )
+          ),
         ],
       ),
     );
